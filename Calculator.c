@@ -3,29 +3,17 @@
 int main()
 {
     float num1,num2,result;
-    int choice;
-    printf("---------------Welcome to calculator Wold ---------------\n"
-     "What Operation like to perform\n"
-     "1) Addition\n"
-     "2) Subraction\n"
-     "3) Multiplication\n"
-     "4) Divition\n"
-     );
+    char operator;
+
      
 
-     printf("Enter first number : ");
-     scanf("%f",&num1);
+     printf("enter calculation: ");
+     scanf("%f %c %f",&num1,&operator,&num2);
 
-    printf("Enter first number : ");
-    scanf("%f",&num2);
-
-    printf("Enter operatin number : ");
-     scanf("%d",&choice);
-
-    switch(choice)
+    switch(operator)
     {
         
-        case 1 : 
+        case '+' : 
         {
             // Addition
             result=num1+num2;
@@ -33,18 +21,18 @@ int main()
 
         }
 
-        case 2:
+        case '-':
         {   
             //subtraction
             result=num1-num2; break;
         }
-        case 3 : 
+        case '*' : 
         {
             //multiprication
             result=num1*num2; break;
         }
 
-        case 4:
+        case '/':
         {
             //divition
             result=num1/num2; break;
@@ -57,7 +45,6 @@ int main()
 
     printf("Result: %.2f\n",result);
 
-    printf("\nPress any key to exit...");
-getchar();
+    
    return 0;
 }
